@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSTRUCCIONES Y OBRAS ELABD S.L | شركة العبد للمقاولات</title>
+    <!-- استيراد خطوط جوجل -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS الأساسي */
+        :root {
+            --main-color: #f39c12; /* لون البناء - البرتقالي */
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        /* الهيدر */
+        header {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--main-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--main-color);
+        }
+
+        /* قسم الواجهة الرئيسية */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1541913054611-fb9c38f4ffa7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+        }
+
+        .btn {
+            margin-top: 2rem;
+            padding: 12px 30px;
+            background-color: var(--main-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+        }
+
+        /* الأقسام العامة */
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            width: 50%;
+            height: 4px;
+            background: var(--main-color);
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+        }
+
+        /* الخدمات */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--main-color);
+            margin-bottom: 20px;
+        }
+
+        /* تواصل معنا */
+        .contact-container {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .contact-form {
+            flex: 2;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-info {
+            flex: 1;
+            background: var(--dark-color);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        /* التذييل */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* التجاوب مع الجوال */
+        @media (max-width: 768px) {
+            header { flex-direction: column; }
+            nav ul { margin-top: 15px; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="logo">ELABD S.L</div>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- واجهة الموقع -->
+    <section class="hero" id="home">
+        <h1>CONSTRUCCIONES Y OBRAS ELABD S.L</h1>
+        <p>نحن نبني المستقبل بدقة واحترافية. خبرة طويلة في مجال الإنشاءات، الترميم، والأشغال العامة.</p>
+        <a href="#contact" class="btn">اطلب استشارة مجانية</a>
+    </section>
+
+    <!-- من نحن -->
+    <section id="about">
+        <div class="section-title">
+            <h2>من نحن</h2>
+        </div>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p>شركة <strong>CONSTRUCCIONES Y OBRAS ELABD S.L</strong> هي شركة رائدة في مجال البناء والأشغال العامة. نلتزم بأعلى معايير الجودة والسلامة في تنفيذ مشاريعنا، سواء كانت سكنية أو تجارية. نجمع بين الخبرة التقنية والابتكار لتحويل رؤية عملائنا إلى واقع ملموس.</p>
+        </div>
+    </section>
+
+    <!-- الخدمات -->
+    <section id="services" style="background-color: #f1f1f1;">
+        <div class="section-title">
+            <h2>خدماتنا</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>بناء المجمعات</h3>
+                <p>تنفيذ المشاريع السكنية والتجارية من الصفر بأحدث التقنيات.</p>
+            </div>
+            <div class="service-card">
+                <h3>الترميم والتجديد</h3>
+                <p>تحديث المباني القديمة وإعادة إحيائها بجودة عالية.</p>
+            </div>
+            <div class="service-card">
+                <h3>الأشغال العامة</h3>
+                <p>بناء الطرق والجسور والبنية التحتية المتكاملة.</p>
+            </div>
+            <div class="service-card">
+                <h3>الاستشارات الهندسية</h3>
+                <p>تقديم دراسات الجدوى والمخططات الهندسية الدقيقة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- الاتصال -->
+    <section id="contact">
+        <div class="section-title">
+            <h2>اتصل بنا</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="الاسم الكامل" required>
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <input type="text" placeholder="الموضوع">
+                    <textarea rows="5" placeholder="رسالتك"></textarea>
+                    <button type="submit" class="btn" style="border: none; width: 100%; cursor: pointer;">إرسال الرسالة</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>معلومات التواصل</h3><br>
+                <p><strong>العنوان:</strong> إسبانيا (أو أضف العنوان التفصيلي هنا)</p><br>
+                <p><strong>الهاتف:</strong> +34 000 000 000</p><br>
+                <p><strong>البريد:</strong> info@elabd-sl.com</p><br>
+                <p><strong>ساعات العمل:</strong> الإثنين - الجمعة (08:00 - 18:00)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2023 | CONSTRUCCIONES Y OBRAS ELABD S.L</p>
+    </footer>
+
+</body>
+</html>
